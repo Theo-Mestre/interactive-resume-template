@@ -6,7 +6,7 @@ export type LocalizedStringArray = Record<string, string[]>
 
 // ===== CONTACT =====
 
-export type ContactType = 'email' | 'phone' | 'location' | 'github' | 'linkedin' | 'website'
+export type ContactType = 'email' | 'phone' | 'location' | 'github' | 'linkedin' | 'website' | 'itchio'
 
 export interface ContactItem {
   type: ContactType

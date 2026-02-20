@@ -3,6 +3,7 @@ import {
   EmailIcon,
   ExternalLinkIcon,
   GitHubIcon,
+  ItchioIcon,
   LinkedInIcon,
   LocationIcon,
   PhoneIcon,
@@ -19,6 +20,7 @@ const ICON_COMPONENTS: Record<ContactType, React.FC<React.SVGProps<SVGSVGElement
   phone: PhoneIcon,
   location: LocationIcon,
   website: WebsiteIcon,
+  itchio: ItchioIcon,
 }
 
 interface ContactItemProps {
@@ -32,7 +34,7 @@ export function ContactItem({ type, label, href }: ContactItemProps) {
   const IconComponent = ICON_COMPONENTS[type]
 
   const isCopyable = type === 'email' || type === 'phone'
-  const isExternal = type === 'github' || type === 'linkedin' || type === 'website'
+  const isExternal = type === 'github' || type === 'linkedin' || type === 'website' || type === 'itchio'
   const resolvedHref = isCopyable ? undefined : href
 
   const handleCopy = useCallback(() => {

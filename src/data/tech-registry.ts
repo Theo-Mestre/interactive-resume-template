@@ -134,7 +134,7 @@ const TECH_REGISTRY = {
 
   // ===== Tools & Others =====
   'Git': { color: '#F05032' },
-  'GitHub': { color: '#181717' },
+  'GitHub': { color: '#2DBA4E' },
   'GitLab': { color: '#FC6D26' },
   'GraphQL': { color: '#E10098' },
   'REST': { color: '#009688' },
@@ -183,6 +183,26 @@ const TECH_REGISTRY = {
   'JSP': { color: '#007396' },
   'JSF': { color: '#007396' },
   'jQuery': { color: '#0769AD' },
+
+  // ===== Game Development =====
+  'Unreal Engine': { color: '#0E1128' },
+  'Unity': { color: '#525252' },
+  'UI Toolkit': { color: '#db6a00' },
+  'Godot': { color: '#478CBF' },
+  'GameMaker': { color: '#8CC84B' },
+  'Visual Studio': { color: '#5C2D91' },
+  'Visual Studio Code': { color: '#007ACC' },
+  'Premake': { color: '#2b9d2a' },
+  'Trello': { color: '#0079BF' },
+  'Notion': { color: '#2d87be' },
+  'Wwise': { color: '#21539d' },
+  'FMOD': { color: '#292929' },
+  '.Net': { color: '#5027d5' },
+
+  // ===== others =====
+  'UX': { color: '#f72d2d' },
+  'VR': { color: '#00b600' },
+  
 } as const satisfies Record<string, { color: string }>
 
 export type TechName = keyof typeof TECH_REGISTRY

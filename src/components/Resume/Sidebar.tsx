@@ -117,7 +117,7 @@ export function Sidebar() {
                 </p>
               )}
               {category.type === 'languages' && (
-                <div className="flex items-center gap-3 text-sm flex-wrap">
+                <div className="flex flex-col gap-2 text-sm">
                   {category.items.map((item, j) => {
                     const name = typeof item.name === 'string' ? item.name : resolve(item.name)
                     return (
