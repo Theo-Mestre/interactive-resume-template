@@ -8,6 +8,7 @@ import { SidebarSection } from './SidebarSection'
 import { ContactItem } from './ContactItem'
 import { SkillCategory } from './SkillCategory'
 import { TechBadge } from './TechBadge'
+import { EducationItem } from './EducationItem'
 
 const PHOTO_ANIMATION_DURATION = 0.8
 
@@ -137,6 +138,24 @@ export function Sidebar() {
           ))}
         </div>
       </SidebarSection>
+
+      {/* Education */}
+      {resumeConfig.education && resumeConfig.education.length > 0 && labels.sections.education && (
+        <SidebarSection title={resolve(labels.sections.education)}>
+          <div className="space-y-4">
+            {resumeConfig.education.map((edu, i) => (
+              <EducationItem
+                key={`${resolve(edu.school)}-${resolve(edu.degree)}-${edu.period ?? i}`}
+                school={resolve(edu.school)}
+                degree={resolve(edu.degree)}
+                specialty={edu.specialty ? resolve(edu.specialty) : undefined}
+                period={edu.period}
+                logo={edu.logo}
+              />
+            ))}
+          </div>
+        </SidebarSection>
+      )}
 
       {/* Hobbies */}
       {hobbies && hobbies.length > 0 && labels.sections.hobbies && (

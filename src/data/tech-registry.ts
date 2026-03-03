@@ -198,6 +198,8 @@ const TECH_REGISTRY = {
   'Wwise': { color: '#21539d' },
   'FMOD': { color: '#292929' },
   '.Net': { color: '#5027d5' },
+  'OpenGL': { color: '#5586A4' },
+  'SFML': { color: '#79b52c' },
 
   // ===== others =====
   'UX': { color: '#f72d2d' },

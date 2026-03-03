@@ -3,7 +3,6 @@ import { useTranslation } from '@/lib/i18n'
 import { resumeConfig } from '@/data/resume-config'
 import { ExperienceItem } from './ExperienceItem'
 import { ProjectItem } from './ProjectItem'
-import { EducationItem } from './EducationItem'
 
 export function MainContent() {
   const { resolve, resolveArray } = useTranslation()
@@ -100,24 +99,6 @@ export function MainContent() {
         </div>
       )}
 
-      {/* Education */}
-      <div className="mt-8">
-        <h2 className="text-sm font-bold tracking-widest text-resume-text mb-4 pb-2 border-b border-resume-primary/20">
-          {resolve(labels.sections.education)}
-        </h2>
-        <div className="space-y-4">
-          {education.map((edu, i) => (
-            <EducationItem
-              key={`${resolve(edu.school)}-${resolve(edu.degree)}-${edu.period ?? i}`}
-              school={resolve(edu.school)}
-              degree={resolve(edu.degree)}
-              specialty={edu.specialty ? resolve(edu.specialty) : undefined}
-              period={edu.period}
-              logo={edu.logo}
-            />
-          ))}
-        </div>
-      </div>
     </div>
   )
 }
