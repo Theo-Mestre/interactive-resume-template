@@ -6,7 +6,7 @@ import { ProjectItem } from './ProjectItem'
 
 export function MainContent() {
   const { resolve, resolveArray } = useTranslation()
-  const { personal, experiences, projects, education, labels } = resumeConfig
+  const { personal, experiences, projects, labels } = resumeConfig
   const [expandedExp, setExpandedExp] = useState<string | null>(null)
 
   const toggleExp = (id: string) => {
