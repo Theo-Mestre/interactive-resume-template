@@ -100,7 +100,7 @@ export const resumeConfig: ResumeConfig = {
       title: { en: 'Methodologies', fr: 'Méthodologies' },
       type: 'text',
       items: [
-        { name: { en: 'Agile/Scrum, Code Review, Prototyping, UML', fr: 'Agile/Scrum, Revue de code, Prototypage, UML' } },
+        { name: { en: 'Agile/Scrum, Code Review, Prototyping, UML, Versionning', fr: 'Agile/Scrum, Revue de code, Prototypage, UML, Contrôle de version' } },
       ],
     },
   ],
